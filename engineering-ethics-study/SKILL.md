@@ -25,3 +25,5 @@ description: 为《工程伦理学》第二版提供中文答疑、原创命题�
 ## 题库与版本
 
 包内题库位于 `references/question-bank.jsonl`。需要继续积累课程来题时，可通过 `--bank` 使用自己的题库。保留原题和给定答案，记录来源、教材页、拟答或扣分点及处理状态。每次修订用新题回测原有判断和新增规则。
+
+开卷简答附 [59 道分点题库](references/open-book-bank.jsonl)。使用 `--bank` 指向此题库，通过 `--item EE-OPEN-Z1` 按题号查，或通过 `--stem` 按题干查。
