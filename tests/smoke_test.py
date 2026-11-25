@@ -8,6 +8,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 LOOKUP = ROOT / "engineering-ethics-study/scripts/lookup.py"
+OPEN_BANK = ROOT / "engineering-ethics-study/references/open-book-bank.jsonl"
 
 
 def lookup(*args):
@@ -43,6 +44,16 @@ class SkillSmokeTests(unittest.TestCase):
 
     def test_bundled_review_by_number(self):
         self.assertIn("安全可靠", lookup("--review", "1.5"))
+
+    def test_open_book_bank_v2_grounding(self):
+        lines = [line for line in OPEN_BANK.read_text(encoding="utf-8").splitlines() if line.strip()]
+        self.assertEqual(len(lines), 68)
+        z4 = lookup("--bank", str(OPEN_BANK), "--item", "EE-OPEN-Z4")
+        self.assertIn("不以国家规定为限", z4)
+        q29 = lookup("--bank", str(OPEN_BANK), "--item", "EE-OPEN-29")
+        self.assertIn("工程造福人类是工程发展的终极目标", q29)
+        q63 = lookup("--bank", str(OPEN_BANK), "--item", "EE-OPEN-63")
+        self.assertIn("工程良心是有用的，但不是万能的", q63)
 
 
 if __name__ == "__main__":
