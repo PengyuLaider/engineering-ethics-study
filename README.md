@@ -25,16 +25,19 @@
 
 ## 一键下载考场资料
 
-2026 年 11 月 26 日 **V3 论析结合 · 黑白打印开卷速查版**共 **30 页 A4（恰好 15 张双面打印，零空白背页）**，PDF 含 142 处可点击目录跳转：
+2026 年 11 月 26 日 **V3 论析结合 · 黑白打印开卷速查版**提供**双版本并行下载**（均恰好 **30 页 A4 = 15 张双面打印零空白背页**，PDF 各含 142 处可点击目录跳转）：
 
 | 资料名称 | 格式与说明 | 适用场景 |
 | --- | --- | --- |
-| **[黑白打印 PDF（30 页）](materials/open-book/short-answer-review.pdf)** · **[可编辑 Word](materials/open-book/short-answer-review.docx?raw=true)** | 重点 4 题 + 八章 64 题 + 3 张速查卡；论析结合答卷语态、正文零页码干扰、6.8pt 原句页码统一附题末 | **直接黑白双面打印带入考场** |
-| **[68 道开卷简答题库（JSONL）](engineering-ethics-study/references/open-book-bank.jsonl)** | 题干、V3 论析结合答卷答案、114 条原书引文、原书页码与评分标准 | 命令行检索 / 考前自测 |
+| **【通用版】** [黑白打印 PDF（30 页）](materials/open-book/short-answer-review.pdf) · [可编辑 Word](materials/open-book/short-answer-review.docx?raw=true) | 重点 4 题 + 八章 64 题 + 3 张速查卡；`Z4` 保留通用专业套写模板；正文零页码干扰、6.8pt 佐证附题末 | **全工科专业通用，直接黑白双面打印** |
+| **【车辆工程专业版】** [黑白打印 PDF（30 页）](materials/open-book/short-answer-review-vehicle.pdf) · [可编辑 Word](materials/open-book/short-answer-review-vehicle.docx?raw=true) | 专为**车辆工程**深度定制：`Z4` 与全书融合制动/碰撞/三电热失控/排放标定/智能网联隐私与召回场景，封底第 30 页专设**原书 5 大汽车案例直引栏** | **车辆工程/汽车类专业考场直抄** |
+| **开卷简答题库（JSONL）**：[通用版 68 题](engineering-ethics-study/references/open-book-bank.jsonl) · [车辆工程版 68 题](engineering-ethics-study/references/open-book-bank-vehicle.jsonl) | 题干、V3 论析结合答卷答案、114 条原书引文、原书页码与评分标准 | 命令行检索 / 考前自测 |
 | **[全面审计与优化清单](materials/open-book-audit-report.md)** | 逐章排查 10 处原书概念偏差、24 处 AI 套话与全部考场改进记录 | 查阅修订依据与避坑点 |
 | **[33 道章末思考题参考答案](materials/chapter-review-answers.md)** | 全书八章 33 道原书章末思考题拟答、教材出处与自测评分 | 课后作业与系统复习 |
 | **[教材案例与思考题索引](materials/textbook-cases-and-questions.md)** | 50 个教材案例与 33 道思考题的印刷页 / PDF 页速查 | 翻书定位原案例与原题 |
 | **[教材底本 Word 校对报告](materials/word-proofreading-report.md)** | 底本页级定位、字符抽检口径与核查说明 | 查证底本准确度口径 |
+
+> **车辆工程专业版特色说明**：全部理论原则、学者论断均 100% 严守原书底本（114 条原句逐字匹配、零笔记体、零 AI 套话），并深度串联教材原生 5 大汽车/交通案例——**麦克弗森诉别克汽车案**（P.92）、**可调高度汽车座椅**（P.134）、**阿斯顿·马丁召回 1.76 万辆跑车**（P.144–145）、**福特发动机排放测试造假案**（P.178）、**汽车尾气光化学烟雾/路旁树木案**（P.185/195），全面覆盖 `Z4`、`21`、`33`、`34`、`50`、`58`、`59`、`64` 及封底速查卡三。
 
 ---
 
@@ -161,11 +164,12 @@ python engineering-ethics-study/scripts/lookup.py --index "教材页索引.jsonl
 | [engineering-ethics-study/SKILL.md](engineering-ethics-study/SKILL.md) | 教材复习、开卷速查与案例分享统一入口 |
 | [engineering-ethics-study/references/course-map.md](engineering-ethics-study/references/course-map.md) | 全书 8 章 39 节知识地图与依据页 |
 | [engineering-ethics-study/references/open-book-workflow.md](engineering-ethics-study/references/open-book-workflow.md) | V3 论析结合、零笔记体、零 AI 套话与黑白打印校验规范 |
-| [engineering-ethics-study/references/open-book-bank.jsonl](engineering-ethics-study/references/open-book-bank.jsonl) | 68 道 V3 论析结合并逐句核验原书的开卷简答题库 |
+| [engineering-ethics-study/references/open-book-bank.jsonl](engineering-ethics-study/references/open-book-bank.jsonl) | 68 道 V3 通用版论析结合开卷简答题库 |
+| [engineering-ethics-study/references/open-book-bank-vehicle.jsonl](engineering-ethics-study/references/open-book-bank-vehicle.jsonl) | 68 道 V3 车辆工程专业定制版开卷简答题库 |
 | [engineering-ethics-study/references/question-bank.jsonl](engineering-ethics-study/references/question-bank.jsonl) | 74 道教材思考题与分节原创练习题库 |
 | [engineering-ethics-study/references/knowledge.jsonl](engineering-ethics-study/references/knowledge.jsonl) | 39 节知识卡 + 12 个跨章主题 + 50 个教材案例卡 |
 | [engineering-ethics-study/scripts/lookup.py](engineering-ethics-study/scripts/lookup.py) | 零依赖命令行检索脚本 |
-| [materials/](materials/) | 30 页 V3 黑白开卷速查 PDF/Word、审计清单、章末思考题答案、案例索引与校对报告 |
+| [materials/](materials/) | 双版本 30 页 V3 黑白开卷速查 PDF/Word（通用版 + 车辆工程专业版）、审计清单、章末思考题答案、案例索引与校对报告 |
 | [tests/smoke_test.py](tests/smoke_test.py) | 覆盖章节、跨章主题、案例、练习题与 V3 开卷题库的冒烟测试 |
 
 运行冒烟测试：
